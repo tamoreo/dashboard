@@ -1,7 +1,10 @@
+body {
+  height: 100vh;
+}
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.6fr 1fr 1fr 1fr;
   grid-template-rows: 0.8fr 1fr 1fr 1fr;
   grid-template-areas:
     "side-bar header header header"
@@ -15,6 +18,15 @@
   grid-area: header;
 }
 
+.btn {
+  border: none;
+  background-color: blue;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px;
+}
+
 .side-bar {
   background-color: #3c7fe4;
   grid-area: side-bar;
@@ -23,4 +35,95 @@
 .main-content {
   background-color: #d3d3d3;
   grid-area: main-content;
+}
+
+header {
+  display: grid;
+  color: #000;
+  background-color: #fff;
+  grid-template-columns: 1fr 1fr 0.7fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "search-bar search-bar user-info"
+    "greeting greeting buttons";
+}
+
+.search-bar {
+  background-color: #312424;
+  grid-area: search-bar;
+}
+
+.user-info {
+  background-color: #ad8d8d;
+  grid-area: user-info;
+}
+
+.greet-user {
+  background-color: #be0d0d;
+  grid-area: greeting;
+}
+
+.buttons {
+  grid-area: buttons;
+}
+
+.main-content {
+  display: grid;
+  color: #000;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 0.7fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "projects projects announce"
+    "projects projects ."
+    "projects projects trend";
+}
+
+.projects {
+  grid-area: projects;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 20px;
+}
+
+.projects .items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+}
+
+.item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: #0dbe1e 5px solid;
+  margin: 0;
+}
+
+.announce {
+  grid-area: announce;
+  margin: 20px;
+}
+.announcement {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.first,
+.second {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.trend {
+  grid-area: trend;
+  margin: 20px;
+}
+
+.trending {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
 }

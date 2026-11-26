@@ -3,7 +3,6 @@ body {
 }
 .container {
   display: grid;
-  height: 100vh;
   grid-template-columns: 0.6fr 1fr 1fr 1fr;
   grid-template-rows: 0.8fr 1fr 1fr 1fr;
   grid-template-areas:
@@ -14,7 +13,7 @@ body {
 }
 
 .header {
-  background-color: aqua;
+  background-color: #fff;
   grid-area: header;
 }
 
@@ -30,6 +29,13 @@ body {
 .side-bar {
   background-color: #3c7fe4;
   grid-area: side-bar;
+  color: #fff;
+}
+
+img {
+  height: 20px;
+  width: 20px;
+  padding-right: 15px;
 }
 
 .main-content {
@@ -49,21 +55,56 @@ header {
 }
 
 .search-bar {
-  background-color: #312424;
   grid-area: search-bar;
 }
 
+.branding,
+.nav-menu {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+li {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+.dash {
+  height: 50px;
+  width: 50px;
+}
+
+.search-bar-area {
+  border-radius: 20px;
+  width: 60%;
+  border: none;
+  background-color: #868181;
+  padding: 6px;
+  margin-left: 80px;
+  margin-top: 10px;
+}
+
 .user-info {
-  background-color: #ad8d8d;
   grid-area: user-info;
 }
 
-.greet-user {
-  background-color: #be0d0d;
-  grid-area: greeting;
+.user-name {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.buttons {
+.greet-user {
+  grid-area: greeting;
+  margin-left: 80px;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.greet .buttons {
   grid-area: buttons;
 }
 
@@ -72,7 +113,7 @@ header {
   color: #000;
   height: 100vh;
   grid-template-columns: 1fr 1fr 0.7fr;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     "projects projects announce"
     "projects projects ."
@@ -98,7 +139,6 @@ header {
   padding: 20px;
   border-radius: 8px;
   border-left: #0dbe1e 5px solid;
-  margin: 0;
 }
 
 .announce {

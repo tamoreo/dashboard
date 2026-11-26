@@ -1,6 +1,10 @@
 body {
   height: 100vh;
+  font-family:
+    system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
 .container {
   display: grid;
   grid-template-columns: 0.6fr 1fr 1fr 1fr;
